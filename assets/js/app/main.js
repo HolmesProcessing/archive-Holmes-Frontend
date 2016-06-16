@@ -6,9 +6,6 @@ var current_env = new Map();
 // url_hash contains all vars parsed from the url
 current_env.set('url_hash', new Map());
 
-current_env.set('debug', false);
-current_env.set('api_url', "http://10.0.4.51:8018/api/");
-
 
 function switch_page(){
 	load_current_env();
