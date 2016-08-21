@@ -1,5 +1,13 @@
+/* general */
+
 body {
-	margin-top: 60px;
+	margin-top: 70px;
+	background-color: #f5f5f5;
+	color: #505050;
+}
+
+.container {
+	width: 95%;
 }
 
 #loading {
@@ -14,3 +22,92 @@ body {
 	font-size: 4em;
 	background-color: rgba(0,0,0,0.5);
 }
+
+
+
+/* navigation */
+
+nav .logo {
+	padding: 0;
+	float: left;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 50px;
+	padding-right: 40px;
+	color: #0d8098 !important;
+}
+
+.navbar {
+	background-color: #fff;
+	border: 0 none;
+	box-shadow: 0 2px 4px rgba(67, 89, 102, 0.4)
+}
+
+#navbar > ul > li > a {
+	font-size: 18px;
+	color: #505050;
+}
+
+#navbar > ul > li.active a {
+	background-color: #fff;
+	border-bottom: 4px solid #0d8098;
+	color: #0d8098;
+	padding-bottom: 11px;
+}
+
+.navbar-default .navbar-nav > .open > a {
+	background-color: #fff !important;
+}
+
+.navbar-nav > li > .dropdown-menu {
+	border-radius: 0;
+}
+
+@media (min-width: 979px) {
+	ul.nav li.dropdown:hover > ul.dropdown-menu {
+		display: block;
+	}
+}
+
+
+
+/* panels */
+
+.panel-holmes {
+	border-radius: 0;
+	box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.panel-holmes > .panel-heading {
+	border-color: #ddd;
+	font-weight: bold;
+}
+
+.panel-holmes > .panel-footer {
+	border-color: #ddd;
+	font-weight: bold;
+	background-color: #fff;
+}
+
+
+
+/* UI */
+
+.btn-holmes, .btn-holmes:hover {
+	background-color: #0d8098;
+	border-color: #0b6c81;
+	color: #fff;
+}
+
+.btn-holmes:focus {
+	color: #fff;
+}
+
+
+
+/* JSON formatting */
+.JSONstring { color: green; }
+.JSONnumber { color: darkorange; }
+.JSONboolean { color: blue; }
+.JSONnull { color: magenta; }
+.JSONkey { color: red; }

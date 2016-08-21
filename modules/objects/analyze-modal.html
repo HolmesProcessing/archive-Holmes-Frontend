@@ -1,0 +1,50 @@
+<div class="modal fade" id="analyze-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Analyze these samples</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+					<label class="col-sm-2 control-label">Username</label>
+						<div class="col-sm-10">
+						<input type="text" class="form-control" id="analyze-modal-username">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Password</label>
+						<div class="col-sm-10">
+							<input type="password" class="form-control" id="analyze-modal-password">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Tags</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="analyze-modal-tags">
+							<p class="help-block">Seperated by comma</p>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Comment</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="analyze-modal-comment">
+						</div>
+					</div>
+
+					<div id="analyze-modal-tasks"></div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-holmes" id="analyze-modal-submit">Analyze</button>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+<script type="text/javascript" src="modules/objects/analyze-modal.js"></script>
