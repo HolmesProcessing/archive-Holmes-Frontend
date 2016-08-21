@@ -1,51 +1,51 @@
 <div class="row">
-
 	<div class="col-md-12">
-		<div class="panel panel-default">
+		<div class="panel panel-holmes">
+		<div class="panel-heading">Object details</div>
 			<div class="panel-body">
-				<button type="button" class="btn btn-default" id="objects-get-btn-download">Download</button>
-				<button type="button" class="btn btn-default" id="objects-get-btn-results">Search results</button>
+				<form id="objects-get-form">
+					<div class="form-group">
+						<label>SHA256</label>
+						<input type="text" class="form-control" name="sha256" disabled>
+					</div>
+
+					<div class="form-group">
+						<label>SHA1</label>
+						<input type="text" class="form-control" name="sha1" disabled>
+					</div>
+
+					<div class="form-group">
+						<label>MD5</label>
+						<input type="text" class="form-control" name="md5" disabled>
+					</div>
+
+					<div class="form-group">
+						<label>Mime</label>
+						<input type="text" class="form-control" name="mime" disabled>
+					</div>
+
+					<div class="form-group">
+						<label>ObjName</label>
+						<input type="text" class="form-control" name="obj_name" disabled>
+					</div>
+
+					<div class="form-group">
+						<label>Source</label>
+						<input type="text" class="form-control" name="source" disabled>
+					</div>
+
+					<div class="form-group">
+						<label>Submissions</label>
+						<p class="form-control disabled" name="submissions" disabled></p>
+					</div>
+				</form>
+			</div>
+			<div class="panel-footer">
+				<button type="button" class="btn btn-holmes" id="objects-get-btn-download">Download</button>
+				<button type="button" class="btn btn-holmes" id="objects-get-btn-results">Search results</button>
+				<button type="button" class="btn btn-holmes" data-toggle="modal" data-target="#analyze-modal">Analyze this sample</button>
 			</div>
 		</div>
-	</div>
-
-	<div class="col-md-12">
-		<form id="objects-get-form">
-			<div class="form-group">
-				<label>SHA256</label>
-				<input type="text" class="form-control" name="sha256" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>SHA1</label>
-				<input type="text" class="form-control" name="sha1" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>MD5</label>
-				<input type="text" class="form-control" name="md5" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>Mime</label>
-				<input type="text" class="form-control" name="mime" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>ObjName</label>
-				<input type="text" class="form-control" name="obj_name" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>Source</label>
-				<input type="text" class="form-control" name="source" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>Submissions</label>
-				<p class="form-control disabled" name="submissions" disabled></p>
-			</div>
-		</form>
 	</div>
 </div>
 

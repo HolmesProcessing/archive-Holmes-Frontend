@@ -1,98 +1,103 @@
 <div class="row">
 	<div class="col-md-12">
+		<div class="panel panel-holmes">
+		<div class="panel-heading">Result details</div>
+			<div class="panel-body">
+				<form id="results-get-form">
+					<div id="results-presentation"></div>
+				
+					<div class="form-group hidden-field">
+						<label>Id</label>
+						<input type="text" class="form-control" name="id" disabled>
+					</div>
 
-		<form id="results-get-form">
-			<div class="form-group">
-				<label>Id</label>
-				<input type="text" class="form-control" name="id" disabled>
+					<div class="form-group">
+						<label>SHA256</label>
+						<p class="form-control disabled" name="sha256" disabled></p>
+					</div>
+
+					<div class="form-group hidden-field">
+						<label>SchemaVersion</label>
+						<input type="text" class="form-control" name="schema_version" disabled>
+					</div>
+
+					<div class="form-group">
+						<label>UserId</label>
+						<input type="text" class="form-control" name="user_id" disabled>
+					</div>
+
+					<div class="form-group hidden-field">
+						<label>SourceId</label>
+						<input type="text" class="form-control" name="source_id" disabled>
+					</div>
+
+					<div class="form-group hidden-field">
+						<label>SourceTag</label>
+						<input type="text" class="form-control" name="source_tag" disabled>
+					</div>
+
+					<div class="form-group">
+						<label>ServiceName</label>
+						<input type="text" class="form-control" name="service_name" disabled>
+					</div>
+
+					<div class="form-group hidden-field">
+						<label>ServiceVersion</label>
+						<input type="text" class="form-control" name="service_version" disabled>
+					</div>
+
+					<div class="form-group hidden-field">
+						<label>ServiceConfig</label>
+						<input type="text" class="form-control" name="service_config" disabled>
+					</div>
+
+					<div class="form-group hidden-field">
+						<label>ObjectCategory</label>
+						<input type="text" class="form-control" name="object_category" disabled>
+					</div>
+
+					<div class="form-group hidden-field">
+						<label>ObjectType</label>
+						<input type="text" class="form-control" name="object_type" disabled>
+					</div>
+
+					<div class="form-group">
+						<label>Tags</label>
+						<input type="text" class="form-control" name="tags" disabled>
+					</div>
+
+					<div class="form-group">
+						<label>StartedDateTime</label>
+						<input type="text" class="form-control" name="started_date_time" disabled>
+					</div>
+
+					<div class="form-group">
+						<label>FinishedDateTime</label>
+						<input type="text" class="form-control" name="finished_date_time" disabled>
+					</div>
+
+					<div class="form-group hidden-field">
+						<label>WatchguardStatus</label>
+						<input type="text" class="form-control" name="watchguard_status" disabled>
+					</div>
+
+					<div class="form-group hidden-field">
+						<label>WatchguardLog</label>
+						<input type="text" class="form-control" name="watchguard_log" disabled>
+					</div>
+
+					<div class="form-group hidden-field">
+						<label>WatchguardVersion</label>
+						<input type="text" class="form-control" name="watchguard_version" disabled>
+					</div>
+
+					<div class="form-group">
+						<label>Raw results</label>
+						<pre name="results"></pre>
+					</div>
+				</form>
 			</div>
-
-			<div class="form-group">
-				<label>SHA256</label>
-				<p class="form-control disabled" name="sha256" disabled></p>
-			</div>
-
-			<div class="form-group">
-				<label>SchemaVersion</label>
-				<input type="text" class="form-control" name="schema_version" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>UserId</label>
-				<input type="text" class="form-control" name="user_id" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>SourceId</label>
-				<input type="text" class="form-control" name="source_id" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>SourceTag</label>
-				<input type="text" class="form-control" name="source_tag" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>ServiceName</label>
-				<input type="text" class="form-control" name="service_name" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>ServiceVersion</label>
-				<input type="text" class="form-control" name="service_version" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>ServiceConfig</label>
-				<input type="text" class="form-control" name="service_config" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>ObjectCategory</label>
-				<input type="text" class="form-control" name="object_category" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>ObjectType</label>
-				<input type="text" class="form-control" name="object_type" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>Tags</label>
-				<input type="text" class="form-control" name="tags" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>StartedDateTime</label>
-				<input type="text" class="form-control" name="started_date_time" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>FinishedDateTime</label>
-				<input type="text" class="form-control" name="finished_date_time" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>WatchguardStatus</label>
-				<input type="text" class="form-control" name="watchguard_status" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>WatchguardLog</label>
-				<input type="text" class="form-control" name="watchguard_log" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>WatchguardVersion</label>
-				<input type="text" class="form-control" name="watchguard_version" disabled>
-			</div>
-
-			<div class="form-group">
-				<label>Results</label>
-				<textarea rows="20" class="form-control" name="results"></textarea>
-			</div>
-		</form>
-
+		</div>
 	</div>
 </div>
 

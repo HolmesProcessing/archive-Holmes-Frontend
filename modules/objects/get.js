@@ -22,6 +22,8 @@ function get_object(sha256){
 				$.each(r.result.Object.submissions, function(k, v){
 					$('#objects-get-form p[name="submissions"]').append('<a href="#module=submissions&action=get&id='+v+'">'+v+'</a>');
 				});
+
+				analyze_modal_build([[r.result.Object.sha256, r.result.Object.obj_name, r.result.Object.source]]);
 			}
 		},
 	});
@@ -56,16 +58,21 @@ function download_object(sha256){
 	});
 }
 
+// load and append analyze modal
+$.ajax({
+	url: "modules/objects/analyze-modal.html",
+	success: function (data) { $('#content').append(data); },
+	dataType: 'html'
+});
+
+// get object data
 get_object(current_env.get('url_hash').get('sha256'));
 
-
 // bind functions to buttons
-
 $('#objects-get-btn-download').on('click', function(){
 	download_object(current_env.get('url_hash').get('sha256'));
 });
 
 $('#objects-get-btn-results').on('click', function(){
 	window.location.href = '#module=results&action=search&filter_sha256='+current_env.get('url_hash').get('sha256');
-	//$(window).trigger('hashchange');
 });
