@@ -103,6 +103,10 @@ nav .logo {
 	color: #fff;
 }
 
+.hidden-field {
+	display: none;
+}
+
 
 
 /* JSON formatting */

@@ -17,6 +17,10 @@ function switch_page(){
 			$( this ).addClass("active");
 		} 
 	});
+	//show all fields?
+	if(!current_env.get('hide_fields')){
+		$('.hidden-field').show();
+	}
 }
 
 
@@ -43,6 +47,7 @@ function load_config(){
 		current_env.set('api_url', data['api_url']);
 		current_env.set('services', data['services']);
 		current_env.set('gateway_url', data['gateway_url']);
+		current_env.set('hide_fields', data['hide_fields']);
 	});
 }
 

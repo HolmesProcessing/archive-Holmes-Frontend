@@ -1,7 +1,7 @@
 'use strict';
 
 function render_result(r){
-	$('#results-presentation').append('<div class="row"><div class="col-md-6"><canvas id="detectedPie" width="400" height="400"></canvas></div><div class="col-md-6"><canvas id="topResults" width="400" height="400"></canvas></div></div>');
+	$('#results-presentation').append('<div class="row"><div class="col-md-6"><canvas id="detectedPie" style="max-width:500px;" width="400" height="400"></canvas></div><div class="col-md-6"><canvas id="topResults" style="max-width:500px;" width="400" height="400"></canvas></div></div>');
 	buildPie(JSON.parse(r.results));
 	buildTop10(JSON.parse(r.results));
 }
