@@ -2,5 +2,6 @@
 	"api_url": "http://localhost:8018/api/",
 	"debug": false,
 	"services": ["asnmeta", "dnsmeta", "gogadget", "objdump", "peid", "peinfo", "virustotal", "yara", "zipmeta"],
-	"gateway_url": ""
+	"gateway_url": "",
+	"hide_fields": true
 }
