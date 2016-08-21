@@ -6,13 +6,21 @@ var current_env = new Map();
 // url_hash contains all vars parsed from the url
 current_env.set('url_hash', new Map());
 
-current_env.set('debug', false);
-current_env.set('api_url', "http://10.0.4.51:8018/api/");
-
 
 function switch_page(){
 	load_current_env();
 	$('#content').load('modules/'+current_env.get('url_hash').get('module')+'/'+current_env.get('url_hash').get('action')+'.html');
+	//set menu
+	$.each($('#navbar ul li'), function(index){
+		$( this ).removeClass("active");
+		if( $( this ).find("a:first-child").attr('href').indexOf(current_env.get('url_hash').get('module')) !== -1 ){
+			$( this ).addClass("active");
+		} 
+	});
+	//show all fields?
+	if(!current_env.get('hide_fields')){
+		$('.hidden-field').show();
+	}
 }
 
 
@@ -33,9 +41,26 @@ function load_current_env(){
 }
 
 
+function load_config(){
+	$.getJSON("assets/js/app/config.json", function(data) {
+		current_env.set('debug', data['debug']);
+		current_env.set('api_url', data['api_url']);
+		current_env.set('services', data['services']);
+		current_env.set('gateway_url', data['gateway_url']);
+		current_env.set('hide_fields', data['hide_fields']);
+	});
+}
+
 
 // this runs everything on first page load
 $( document ).ready(function() {
+	// there is currently no reason for async calls
+	$.ajaxSetup({
+		async: false
+	});
+
+	load_config();
+
 	// jquery has loaded, hide the loading overlay
 	$( "#loading" ).hide();
 	
