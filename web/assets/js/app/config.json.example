@@ -1,7 +1,7 @@
 {
 	"api_url": "http://localhost:8018/api/",
 	"debug": false,
-	"services": ["asnmeta", "dnsmeta", "gogadget", "objdump", "peid", "peinfo", "virustotal", "yara", "zipmeta"],
-	"gateway_url": "",
+	"services": ["ASNMETA", "CUCKOO", "DNSMETA", "GOGADGET", "OBJDUMP", "PEID", "PEINFO", "VIRUSTOTAL", "YARA", "ZIPMETA"],
+	"gateway_url": "http://my.mastergateway.server:8090/task/",
 	"hide_fields": true
 }

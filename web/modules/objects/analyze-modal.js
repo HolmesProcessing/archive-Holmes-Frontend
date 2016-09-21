@@ -56,12 +56,12 @@ function analyze_samples(username, password, obj_list, tasks, tags, comment){
 		task_list.push({
 			"primaryURI": v[0],
 			"secondaryURI": "",
-			"filename": v[1],
+			"filename": v[1][0], //take only the first known name
 			"tasks": tasks_prepared,
 			"tags": tags,
 			"comment": comment,
 			"download": true,
-			"source": v[2],
+			"source": v[2][0], //take only the first known source
 			"attempts": 0
 		});
 	});
