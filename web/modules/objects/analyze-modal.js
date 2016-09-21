@@ -61,7 +61,7 @@ function analyze_samples(username, password, obj_list, tasks, tags, comment){
 			"tags": tags,
 			"comment": comment,
 			"download": true,
-			"source": v[2][0], //take only the first known source
+			"source": v[2][0], //TODO: allow the user to specify the source
 			"attempts": 0
 		});
 	});
